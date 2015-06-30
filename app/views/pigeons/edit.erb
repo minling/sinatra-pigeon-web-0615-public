@@ -1,8 +1,23 @@
 <%= erb :'layouts/_header' %>
 
-<h1>Edit Pigeon</h1>
+<h1>Edit <%= @pigeon.name %></h1>
 
 <!-- form goes here -->
+<form action= "/pigeons" method= "POST">
+  Edit Name:<br>
+<input type="text" name="name" value="<%= @pigeon.name%>">
+<br>
+  Edit Color:<br>
+<input type="text" color="color" value="<%= @pigeon.color%>">
+  Edit Gender:<br>
+<input type="text" gender="gender" value="<%= @pigeon.gender%>">
+<br>
+  Edit Lives:<br>
+<input type="text" lives="lives" value="<%= @pigeon.lives%>">
+
+<input type = "submit" value="update">
+</form>
+
 
 <a class="button" href="/pigeons">Cancel</a>
 
